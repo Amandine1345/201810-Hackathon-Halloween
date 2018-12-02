@@ -29,9 +29,9 @@ define('APP_DB_NAME', 'your_db_name');
 define('APP_DB_USER', 'your_db_user_wich_is_not_root');
 define('APP_DB_PWD', 'your_db_password');
 ```
-4. Créer une nouvelle base sur le serveur local et importer le fichier `data/201810-Hackathon-Halloween`.
+4. Créer une nouvelle base sur le serveur local et importer le fichier `data/201810-Hackathon-Halloween.sql`.
 5. Lancer votre serveur local `php -S localhost:8000 -t public/`.
-6. Lancer [http://localhost:8000/database](http://localhost:8000/database) pour remplir la base de données.
+6. Lancer [http://localhost:8000/database](http://localhost:8000/database), depuis votre navigateur, pour remplir la base de données.
 7. Tester l'application !
 
 ### Langages
