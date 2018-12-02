@@ -23,7 +23,8 @@ class BonbondexManager extends AbstractManager
     const TABLE = 'bonbondex';
 
     /**
-     *  Initializes this class.
+     * BonbondexManager constructor.
+     * @param \PDO $pdo
      */
     public function __construct(\PDO $pdo)
     {

@@ -1,1 +1,0 @@
-SELECT * FROM simplemvc.item;

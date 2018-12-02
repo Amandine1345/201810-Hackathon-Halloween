@@ -20,7 +20,8 @@ class MapManager extends AbstractManager
     const TABLE = 'bonbondex';
 
     /**
-     *  Initializes this class.
+     * MapManager constructor.
+     * @param \PDO $pdo
      */
     public function __construct(\PDO $pdo)
     {

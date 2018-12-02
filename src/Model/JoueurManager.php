@@ -20,7 +20,8 @@ class JoueurManager extends AbstractManager
     const TABLE = 'joueur';
 
     /**
-     *  Initializes this class.
+     * JoueurManager constructor.
+     * @param \PDO $pdo
      */
     public function __construct(\PDO $pdo)
     {

@@ -20,7 +20,8 @@ class BonbonManager extends AbstractManager
     const TABLE = 'quantite';
 
     /**
-     *  Initializes this class.
+     * BonbonManager constructor.
+     * @param \PDO $pdo
      */
     public function __construct(\PDO $pdo)
     {

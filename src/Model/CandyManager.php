@@ -25,8 +25,8 @@ class CandyManager extends AbstractManager
     }
 
     /**
-     * @param Item $item
-     * @return int
+     * @param Candy $candy
+     * @return string
      */
     public function addCandy(Candy $candy)
     {

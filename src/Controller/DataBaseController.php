@@ -11,6 +11,9 @@ class DataBaseController extends AbstractController
     private $uri = 'https://fr.openfoodfacts.org/cgi/search.pl';
     private $search = 'bonbons';
 
+    /**
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function fillInDataBase()
     {
         // Create a client with a base URI
@@ -21,7 +24,7 @@ class DataBaseController extends AbstractController
                 'search_terms' => $this->search,
                 'country' => 'France',
                 'search_simple' => 1,
-                'page_size' => 75,
+                'page_size' => 35,
                 'json' => 1
             ]
         ]);
@@ -39,21 +42,18 @@ class DataBaseController extends AbstractController
                 $candy->setNom(ucwords(strtolower($product['product_name_fr'])));
                 $candy->setImageUrl($product['image_front_small_url']);
                 $candy->setCategorieId(1);
-
+                $candyManager->addCandy($candy);
             }
+
+            header('Location: /affectAdresse');
         }
     }
 
-
     /**
-     * GPS du client
-     * @param $latitude
-     * @param $longitude
+     * @param array $coord
      */
     public function affectAdresse($coord = [47.902964, 1.909251])
     {
-       /*  $longitudeClient = 1.909251;
-        $latitudeClient = 47.902964; */
         $longitudeClient = $coord[1];
         $latitudeClient = $coord[0];
         $rayonEnKm = 3;
@@ -72,11 +72,11 @@ class DataBaseController extends AbstractController
             $candyManager->affectAddress($id, $latitude, $longitude);
         }
 
-        //header('Location: /bonbondex');
+        header('Location: /');
     }
 
     /**
-     * Donne un point GPS aléatoire entre le point donnée et un rayon
+     * Donne un point GPS aléatoire entre le point donné et un rayon
      * @param $centre
      * @param $radius
      * @return array

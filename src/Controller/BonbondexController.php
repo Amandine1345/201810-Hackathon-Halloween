@@ -55,9 +55,6 @@ class BonbondexController extends AbstractController
             $id = $bonbondexManager->insert($bonbondex);
             header('Location:/bonbondex#bonbon' . $_POST['bonbon_id']);
         }
-
-        return $this->twig->render('/bonbondex.html.twig', ['bonbons' => $bonbons]);
-        
     }
 
     public function getAdresse($latitude, $longitude)
