@@ -16,7 +16,7 @@ consignes données:
 
 * Durée du projet : 28 heures
 
-![Le Bonbondex](https://drive.google.com/uc?export=view&id=13NCEzvkrNJd_LfRARFuLReqEBu138pHm)
+![Le Bonbondex](https://drive.google.com/uc?export=view&id=1lL_s6LKhWBARQaRo7MmqGAI9zXBzznMV)
 
 ## Installation
 
@@ -40,13 +40,13 @@ define('APP_DB_PWD', 'your_db_password');
 * Bootstrap 4
 * PHP 7
 
-### Versionning
+### Versioning
 * Git
 
-### Réalisé avec
+### Outils
 * PhpStorm
  
-#### Contributeurs
+### Contributeurs
 
 * Patricia Batjorm - [PBAT75](https://github.com/PBAT75)
 * Guillaume Gallier - [Guisharko](https://github.com/Guisharko)
